@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+.body{
+    min-height: 150vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/myprojects.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.title{
+    width: 90%;
+    color: #fff;
+    font-size: 60px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    animation: ani 0.5s ease-out forwards;
+    
+}
+.title h1{
+    opacity: 0;
+    
+}
+.title h1{
+    animation: ani 0.75s ease-out 0.75s forwards;
+}
+
+@keyframes ani{
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.projects-container{
+    display: flex;
+    padding-top: 400px;
+    
+    
+}
+.projects-container div{
+    
+    padding: 10px;
+}
+.box-1{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.box-1 img{
+    width: auto;
+    height: 50%;
+    opacity: 0;
+    animation: ani-img 1s ease-out 1.5s forwards;
+}
+
+@keyframes ani-img{
+    100%{
+        opacity: 1;
+    }
+}
+
+.box-2{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word; /*Prevents OVERFLOW*/
+    
+}
+.box-2 h1{
+    color: white;
+    opacity: 0;
+    animation: ani-text 1s ease-out 1.75s forwards;
+}
+@keyframes ani-text{
+    100%{
+        opacity: 1;
+    }
+}
