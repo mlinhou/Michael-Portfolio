@@ -3,6 +3,51 @@
     padding:0;
     font-family: 'Roboto', sans-serif;
 }
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    opacity: 0;
+}
+.nav-links{
+    animation: nav-ani 0.75s ease-out 2.5s forwards;
+}
+@keyframes nav-ani{
+    100%{
+        opacity: 1;
+    }
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
 .body{
     min-height: 150vh;
     width: 100%;
